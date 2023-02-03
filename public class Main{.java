@@ -8,12 +8,13 @@ import javax.sound.sampled.Line;
 public class Main{
     
     public static void main (String [] args){
-        System.out.println("GUESS THE CELEBRITY. Here are the traits you can guess : hair color,  name,  age,  gender,  heritage,  deceased,  profession. (all lowercase except for names)");
+        
         Scanner readMe = new Scanner(System.in);
         int num  = (int) Math.random()*9;
+        System.out.println("GUESS THE CELEBRITY. Here are the traits you can guess : hair color,  name,  age,  gender,  heritage,  deceased,  profession. (all lowercase except for names)");
     }
    
-    public class People {
+    
         
         Celebrity RobinWilliams = new Celebrity("brown", "Robin Williams", 63, "male", "american", true, "actor");
         Celebrity KevinHart = new Celebrity("brown", "Kevin Hart", 43, "male", "american", false, "actor");
@@ -28,9 +29,23 @@ public class Main{
         
         ArrayList <Celebrity> nameBank = new ArrayList <Celebrity>(Arrays.asList(RobinWilliams,KevinHart,MargotRobbie,SerenaWilliams,CristianoRonaldo,JalenHurts,Rihanna,MeganFox,NickiMinaj,JoeBiden)); 
 
-        String[] traits = {"hair color,  name,  age,  gender,  heritage,  deceased,  profession"};
+        String[] traitList = {"hair color,  name,  age,  gender,  heritage,  deceased,  profession"};
 
-        
+    public String pickATrait(String trait){
+        for (int i = 0; i>=traitList.length; i++){
+            if(trait.equals(traitList[i])){
+            System.out.println("guess the Celebrity's "+trait);
+            }
+            else{
+            return("that is not a trait that you can Guess. choose another one");
+
+        }
+
+    }
         
  }
+    public String guess(){
+
+    }
+
 }
