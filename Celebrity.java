@@ -1,13 +1,13 @@
 public class Celebrity{
-    String eyeColor;
+    String heritage;
     String name;
     String gender;
-    double height;
+    String age ;
     String hairColor;
-    boolean deceased;
+    String deceased;
     String profession;
 
-    Celebrity(String hairColor, String name, int age, String gender, String heritage, boolean deceased, String profession){
+    Celebrity(String hairColor, String name, String age, String gender, String heritage, String deceased, String profession){
         this.hairColor = hairColor;
         this.name=name;
         this.age=age;
@@ -30,9 +30,9 @@ public class Celebrity{
         return(this.gender);
     }
     public String getheritage(){
-        return(this.race);
+        return(this.heritage);
     }
-    public boolean getdeceased(){
+    public String getdeceased(){
         return(this.deceased);
     }
     public String getprofession(){
